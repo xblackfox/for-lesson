@@ -1,0 +1,16 @@
+Title:
+<%= @x.title %> <br>
+Content:
+<%= @x.content %><br>
+posted by
+<%= @x.user.email %><br>
+<div Class="poster">
+<%= image_tag @x.image_url.to_s %>
+<br>
+
+<%= render 'comments/comments' %>
+
+
+<%= link_to 'edit', edit_poster_path(id: @x.id) %><br>
+<%= link_to 'back to all post', posters_path %><br>
+<%= link_to 'DELETE', poster_path(id: @x.id), method: :delete, data:{confirm: "SURE??"} %>

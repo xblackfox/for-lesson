@@ -1,0 +1,17 @@
+<h1>Index</h1>
+
+<% @x.each do |post| %>
+
+    <%= post.title %> <br>
+    <%= post.content %>
+
+<br>
+
+<%= link_to 'view', poster_path(post)%>
+
+<br>
+
+<%end%>
+<br>
+<br>
+<%= link_to 'new', new_poster_path %>
